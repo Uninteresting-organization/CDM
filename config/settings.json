@@ -1,0 +1,7 @@
+{
+    "default_save_path": "./downloads",
+    "max_threads": 4,
+    "timeout": 30,
+    "enable_logging": true,
+    "log_file": "cdm_log.txt"
+}
