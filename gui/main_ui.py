@@ -33,12 +33,6 @@ class CDMApp(QMainWindow):
 
         self.status = QLabel("")
         self.layout.addWidget(self.status)
-
-        # 可選：訊息顯示區
-        # from PyQt5.QtWidgets import QTextEdit
-        # self.text_edit = QTextEdit()
-        # self.layout.addWidget(self.text_edit)
-
         self.setCentralWidget(self.central_widget)
         self.save_path = os.path.join(os.getcwd(), "downloads")
         os.makedirs(self.save_path, exist_ok=True)
@@ -68,9 +62,7 @@ class CDMApp(QMainWindow):
         self.progress.setValue(0)
 
     def append_text(self, text):
-        # 假設 self.text_edit 是你的訊息顯示區
         self.text_edit.append(text)
-        # 控制最多顯示 self.max_lines 條
         lines = self.text_edit.toPlainText().split('\n')
         if len(lines) > self.max_lines:
             # 只保留最後 max_lines 條
